@@ -23,7 +23,7 @@ import (
 )
 
 const (
-	HAM_LINUX_BINARY_URL string = "https://github.com/antony-jr/ham/releases/download/stable/ham-build-linux-amd64"
+	HAM_LINUX_BINARY_URL string = "https://github.com/warpy-ai/ham/releases/download/stable/ham-build-linux-amd64"
 )
 
 type getT struct {
