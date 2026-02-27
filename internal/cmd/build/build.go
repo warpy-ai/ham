@@ -199,6 +199,9 @@ func NewCommand() *cli.Command {
 
 				commands := []string{
 					"export DEBIAN_FRONTEND=noninteractive",
+					"export NEEDRESTART_MODE=a",
+					"sed -i \"s/#\\$nrconf{restart} = 'i';/\\$nrconf{restart} = 'a';/\" /etc/needrestart/needrestart.conf 2>/dev/null || true",
+					"apt-get remove -y -qq needrestart 2>/dev/null || true",
 					"apt update -y -qq",
 					"apt upgrade -y -qq",
 					dep_install_command,
